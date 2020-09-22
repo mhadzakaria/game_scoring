@@ -1,28 +1,21 @@
 class RemiGamesController < ApplicationController
   before_action :set_remi_game, only: [:show, :edit, :update, :destroy]
 
-  # GET /remi_games
-  # GET /remi_games.json
   def index
     @remi_games = RemiGame.all
+    # redirect_to new_remi_games_url
   end
 
-  # GET /remi_games/1
-  # GET /remi_games/1.json
   def show
   end
 
-  # GET /remi_games/new
   def new
     @remi_game = RemiGame.new
   end
 
-  # GET /remi_games/1/edit
   def edit
   end
 
-  # POST /remi_games
-  # POST /remi_games.json
   def create
     @remi_game = RemiGame.new(remi_game_params)
 
@@ -37,8 +30,6 @@ class RemiGamesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /remi_games/1
-  # PATCH/PUT /remi_games/1.json
   def update
     respond_to do |format|
       if @remi_game.update(remi_game_params)
@@ -51,8 +42,6 @@ class RemiGamesController < ApplicationController
     end
   end
 
-  # DELETE /remi_games/1
-  # DELETE /remi_games/1.json
   def destroy
     @remi_game.destroy
     respond_to do |format|
@@ -62,12 +51,10 @@ class RemiGamesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_remi_game
       @remi_game = RemiGame.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def remi_game_params
       params.require(:remi_game).permit(:name, :player_1, :player_2, :player_3, :player_4)
     end
