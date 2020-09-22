@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Remi Games</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Player 1</th>
+      <th>Player 2</th>
+      <th>Player 3</th>
+      <th>Player 4</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @remi_games.each do |remi_game| %>
+      <tr>
+        <td><%= remi_game.name %></td>
+        <td><%= remi_game.player_1 %></td>
+        <td><%= remi_game.player_2 %></td>
+        <td><%= remi_game.player_3 %></td>
+        <td><%= remi_game.player_4 %></td>
+        <td><%= link_to 'Show', remi_game %></td>
+        <td><%= link_to 'Edit', edit_remi_game_path(remi_game) %></td>
+        <td><%= link_to 'Destroy', remi_game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Remi Game', new_remi_game_path %>

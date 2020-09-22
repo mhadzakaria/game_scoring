@@ -1,0 +1,2 @@
+class RemiGame < ApplicationRecord
+end

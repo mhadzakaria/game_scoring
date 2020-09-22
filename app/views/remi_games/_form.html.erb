@@ -1,0 +1,42 @@
+<%= form_with(model: remi_game, local: true) do |form| %>
+  <% if remi_game.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(remi_game.errors.count, "error") %> prohibited this remi_game from being saved:</h2>
+
+      <ul>
+        <% remi_game.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :player_1 %>
+    <%= form.text_area :player_1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :player_2 %>
+    <%= form.text_area :player_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :player_3 %>
+    <%= form.text_area :player_3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :player_4 %>
+    <%= form.text_area :player_4 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

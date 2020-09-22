@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @remi_game.name %>
+</p>
+
+<p>
+  <strong>Player 1:</strong>
+  <%= @remi_game.player_1 %>
+</p>
+
+<p>
+  <strong>Player 2:</strong>
+  <%= @remi_game.player_2 %>
+</p>
+
+<p>
+  <strong>Player 3:</strong>
+  <%= @remi_game.player_3 %>
+</p>
+
+<p>
+  <strong>Player 4:</strong>
+  <%= @remi_game.player_4 %>
+</p>
+
+<%= link_to 'Edit', edit_remi_game_path(@remi_game) %> |
+<%= link_to 'Back', remi_games_path %>
